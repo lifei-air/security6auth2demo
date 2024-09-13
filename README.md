@@ -17,8 +17,9 @@ https://gitee.com/LearningTech/springoatuh2
 
 ● Spring Boot 3
 
- **核心概念和流程
-** 
+ **核心概念和流程** 
+
+
 ● SecurityFilterChain: 表示Spring Security的过滤器链。实现安全配置和认证扩展配置
 
 ● RegisteredClientRepository： 表示自定义的授权客户端信息，需要进行配置。这个客户端信息是oauth2/token中需要进行认证的信息。
@@ -28,5 +29,6 @@ https://gitee.com/LearningTech/springoatuh2
 ●  AuthenticationProvider： 验证登录信息，实现token的生成。需要对其进行扩展
 
 ● AuthenticationConverter： 实现对AbstractAuthenticationToken自定义扩展类的转换。
+
 
 主要流程就是，实现上述AbstractAuthenticationToken、AuthenticationProvider、AuthenticationConverter三个抽象类和接口的扩展。并通过实现AuthenticationSuccessHandler扩展类，用来返回token给http response中。
